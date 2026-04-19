@@ -1,0 +1,2 @@
+[2026-04-19T13:29:57.321094] Error inesperado al procesar el Excel: cannot convert float NaN to integer
+[2026-04-19T13:29:57.437672] Error inesperado al procesar el Excel: cannot convert float NaN to integer
