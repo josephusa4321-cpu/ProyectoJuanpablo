@@ -408,17 +408,17 @@
 {
   "owner": "Joseph Restrepo",
   "vehicle": {
-    "make": "Nissan",
-    "model": "March",
+    "make": "Generico",
+    "model": "Vehiculo",
     "plate": "UUO-808",
-    "year": 2020
+    "year": 2024
   },
   "period": {
     "start": "2025-12-15",
     "end": "2026-04-16",
     "days": 123
   },
-  "updated": "2026-04-19T14:55:17-05:00",
+  "updated": "2026-04-19T16:01:53-05:00",
   "admin": {
     "name": "Juan Pablo Bayona",
     "company": "Cargun360",
@@ -427,49 +427,49 @@
   },
   "totals": {
     "gross_income": 6670000.0,
-    "admin_commission": 1640140.0,
-    "operating_expenses": 5780130.0,
-    "net_result": -750270.0,
-    "margin_pct": -11.2,
-    "rentals": 17,
-    "drivers": 6,
-    "anomalies": 1
+    "admin_commission": 1427380.0,
+    "operating_expenses": 8122890.0,
+    "net_result": -2880270.0,
+    "margin_pct": -19.3,
+    "rentals": 18,
+    "drivers": 7,
+    "anomalies": 2
   },
   "expense_distribution": [
     {
-      "key": "accessories",
+      "key": "other",
       "label": "Accesorio",
-      "pct": 13.9,
+      "pct": 10.8,
       "amount": 1030000.0
     },
     {
       "key": "admin",
       "label": "Gasto administrativo",
-      "pct": 22.1,
-      "amount": 1640140.0
+      "pct": 17.3,
+      "amount": 1654290.0
     },
     {
       "key": "labor",
       "label": "Mano de obra",
-      "pct": 24.5,
-      "amount": 1820000.0
+      "pct": 28.4,
+      "amount": 2720000.0
     },
     {
       "key": "maintenance",
       "label": "Mantenimiento",
-      "pct": 10.2,
-      "amount": 759030.0
+      "pct": 17.0,
+      "amount": 1629030.0
     },
     {
       "key": "parts",
       "label": "Repuesto",
-      "pct": 24.4,
-      "amount": 1807500.0
+      "pct": 22.7,
+      "amount": 2167500.0
     },
     {
       "key": "inspection",
       "label": "Técnico mecánica",
-      "pct": 4.9,
+      "pct": 3.8,
       "amount": 363600.0
     }
   ],
@@ -492,17 +492,17 @@
     {
       "w": "Sem 4",
       "income": 550000.0,
-      "expenses": 1597700.0
+      "expenses": 1937700.0
     },
     {
       "w": "Sem 5",
       "income": 320000.0,
-      "expenses": 508480.0
+      "expenses": 1278480.0
     },
     {
       "w": "Sem 6",
       "income": 480000.0,
-      "expenses": 102720.0
+      "expenses": 1122720.0
     },
     {
       "w": "Sem 7",
@@ -557,7 +557,7 @@
     {
       "w": "Sem 51",
       "income": 0.0,
-      "expenses": 1590600.0
+      "expenses": 1604750.0
     },
     {
       "w": "Sem 52",
@@ -567,12 +567,12 @@
   ],
   "ops": {
     "days": 123,
-    "rentals": 17,
-    "utility_per_day": -6100.0,
-    "drivers": 6,
-    "anomaly_count": 1,
-    "occupancy_pct": 96.7,
-    "avg_rental_value": 392353.0
+    "rentals": 18,
+    "utility_per_day": -10485.0,
+    "drivers": 7,
+    "anomaly_count": 2,
+    "occupancy_pct": 100,
+    "avg_rental_value": 370556.0
   },
   "top_expenses": [
     {
@@ -581,6 +581,14 @@
       "driver": "Juan Pablo Bayona Areiza",
       "description": "Se paga en la rectificadora la cepillada de la culata",
       "amount": 1310000.0,
+      "anomaly": true
+    },
+    {
+      "date": "2026-02-03",
+      "category": "Mano de obra",
+      "driver": "Juan Pablo Bayona Areiza",
+      "description": "Mano de obra",
+      "amount": 900000.0,
       "anomaly": true
     },
     {
@@ -616,6 +624,14 @@
       "anomaly": false
     },
     {
+      "date": "2026-01-30",
+      "category": "Mantenimiento",
+      "driver": "Juan Pablo Bayona Areiza",
+      "description": "Aceites de caja 5 litros CVT",
+      "amount": 300000.0,
+      "anomaly": false
+    },
+    {
       "date": "2026-01-29",
       "category": "Repuesto",
       "driver": "Juan Pablo Bayona Areiza",
@@ -637,22 +653,6 @@
       "driver": "Otros conductores ",
       "description": "Se paga el arreglo del aire acondicionado; se le organiza el sistema electrico porque estaba haciendo un corto y no enviaba corriente al compresor del aire",
       "amount": 190000.0,
-      "anomaly": false
-    },
-    {
-      "date": "2026-01-20",
-      "category": "Repuesto",
-      "driver": "Juan Pablo Bayona Areiza",
-      "description": "Anillos del motor STD",
-      "amount": 170000.0,
-      "anomaly": false
-    },
-    {
-      "date": "2026-01-10",
-      "category": "Gasto administrativo",
-      "driver": "Juan Pablo Bayona Areiza",
-      "description": "Se realiza la devolucion del dinero que dio el conductor ya que este correspondio rescatarlo ya que el conductor fue irresponsable y se decidio quitarle el carro; el dinero se le quito porque estaba poniendo mucho problema y fue lo mejor",
-      "amount": 160000.0,
       "anomaly": false
     }
   ],
@@ -743,17 +743,8 @@
       "type": "out",
       "category": "Repuesto",
       "driver": "José Daniel ótalvaro ",
-      "description": "Se pagan latas de aire acondicionado",
-      "amount": 60000.0,
-      "anomaly": false
-    },
-    {
-      "date": "2026-04-09",
-      "type": "out",
-      "category": "Mantenimiento",
-      "driver": "José Daniel ótalvaro ",
-      "description": "Se manda a arreglar la manguera del aire acondicionado ",
-      "amount": 130000.0,
+      "description": "Se compra 1/4 de aceite debido a que tiene una fuga de aceite",
+      "amount": 50000.0,
       "anomaly": false
     },
     {
@@ -768,6 +759,15 @@
     {
       "date": "2026-04-09",
       "type": "out",
+      "category": "Repuesto",
+      "driver": "José Daniel ótalvaro ",
+      "description": "Se pagan latas de aire acondicionado",
+      "amount": 60000.0,
+      "anomaly": false
+    },
+    {
+      "date": "2026-04-09",
+      "type": "out",
       "category": "Mantenimiento",
       "driver": "José Daniel ótalvaro ",
       "description": "Se le realiza cambio de aceite ",
@@ -777,19 +777,10 @@
     {
       "date": "2026-04-09",
       "type": "out",
-      "category": "Repuesto",
+      "category": "Mantenimiento",
       "driver": "José Daniel ótalvaro ",
-      "description": "Se compra 1/4 de aceite debido a que tiene una fuga de aceite",
-      "amount": 50000.0,
-      "anomaly": false
-    },
-    {
-      "date": "2026-04-08",
-      "type": "out",
-      "category": "Gasto administrativo",
-      "driver": "Juan Pablo Bayona Areiza",
-      "description": "Se paga administración  del 08 al 14 de abril",
-      "amount": 94160.0,
+      "description": "Se manda a arreglar la manguera del aire acondicionado ",
+      "amount": 130000.0,
       "anomaly": false
     },
     {
@@ -799,6 +790,15 @@
       "driver": "José Daniel ótalvaro ",
       "description": "Liquidación semana del 08 al 14 de abril (83.535 Km)",
       "amount": 440000.0,
+      "anomaly": false
+    },
+    {
+      "date": "2026-04-08",
+      "type": "out",
+      "category": "Gasto administrativo",
+      "driver": "Juan Pablo Bayona Areiza",
+      "description": "Se paga administración  del 08 al 14 de abril",
+      "amount": 94160.0,
       "anomaly": false
     },
     {
@@ -817,6 +817,15 @@
       "driver": "José Daniel ótalvaro ",
       "description": "Se le compra refrigerante ",
       "amount": 13000.0,
+      "anomaly": false
+    },
+    {
+      "date": "2026-04-06",
+      "type": "out",
+      "category": "Mantenimiento",
+      "driver": "José Daniel ótalvaro ",
+      "description": "Se recarga el aire acondicionado debido a que se está descaragando ",
+      "amount": 100000.0,
       "anomaly": false
     },
     {
@@ -847,12 +856,12 @@
       "anomaly": false
     },
     {
-      "date": "2026-04-06",
+      "date": "2026-04-01",
       "type": "out",
-      "category": "Mantenimiento",
-      "driver": "José Daniel ótalvaro ",
-      "description": "Se recarga el aire acondicionado debido a que se está descaragando ",
-      "amount": 100000.0,
+      "category": "Gasto administrativo",
+      "driver": "Juan Pablo Bayona Areiza",
+      "description": "Se paga administración  del 01 al 07 de abril ",
+      "amount": 102720.0,
       "anomaly": false
     },
     {
@@ -865,12 +874,12 @@
       "anomaly": false
     },
     {
-      "date": "2026-04-01",
-      "type": "out",
-      "category": "Gasto administrativo",
-      "driver": "Juan Pablo Bayona Areiza",
-      "description": "Se paga administración  del 01 al 07 de abril ",
-      "amount": 102720.0,
+      "date": "2026-03-24",
+      "type": "in",
+      "category": "Liquidación",
+      "driver": "Jose Daniel Otálvaro ",
+      "description": "Liquidación semana del 25 al 31 de marzo (80.953 Km)  ",
+      "amount": 400000.0,
       "anomaly": false
     },
     {
@@ -887,8 +896,8 @@
       "type": "out",
       "category": "Repuesto",
       "driver": "Juan Pablo Bayona Areiza",
-      "description": "Se compra filtro de aire de motor ",
-      "amount": 29000.0,
+      "description": "Se compra una bobina ",
+      "amount": 60000.0,
       "anomaly": false
     },
     {
@@ -896,17 +905,8 @@
       "type": "out",
       "category": "Repuesto",
       "driver": "Juan Pablo Bayona Areiza",
-      "description": "Se compra una bobina ",
-      "amount": 60000.0,
-      "anomaly": false
-    },
-    {
-      "date": "2026-03-24",
-      "type": "in",
-      "category": "Liquidación",
-      "driver": "Jose Daniel Otálvaro ",
-      "description": "Liquidación semana del 25 al 31 de marzo (80.953 Km)  ",
-      "amount": 400000.0,
+      "description": "Se compra filtro de aire de motor ",
+      "amount": 29000.0,
       "anomaly": false
     },
     {
@@ -950,8 +950,8 @@
       "type": "out",
       "category": "Repuesto",
       "driver": "Jose Daniel Otálvaro ",
-      "description": "Se compran 2 latas de gas para recargar el aire acondicionado",
-      "amount": 38000.0,
+      "description": "Se compran las dos llantas delanteras",
+      "amount": 309000.0,
       "anomaly": false
     },
     {
@@ -959,17 +959,8 @@
       "type": "out",
       "category": "Repuesto",
       "driver": "Jose Daniel Otálvaro ",
-      "description": "Se compran las dos llantas delanteras",
-      "amount": 309000.0,
-      "anomaly": false
-    },
-    {
-      "date": "2026-03-13",
-      "type": "out",
-      "category": "Gasto administrativo",
-      "driver": "Juan Pablo Bayona Areiza",
-      "description": "Se paga administrtación del 18 al 24 de marzo",
-      "amount": 102720.0,
+      "description": "Se compran 2 latas de gas para recargar el aire acondicionado",
+      "amount": 38000.0,
       "anomaly": false
     },
     {
@@ -997,6 +988,15 @@
       "driver": "Jose Daniel Otálvaro ",
       "description": "Se le echa 1/4 de aceite de motor ya que tiene una pequeña fuga",
       "amount": 50000.0,
+      "anomaly": false
+    },
+    {
+      "date": "2026-03-13",
+      "type": "out",
+      "category": "Gasto administrativo",
+      "driver": "Juan Pablo Bayona Areiza",
+      "description": "Se paga administrtación del 18 al 24 de marzo",
+      "amount": 102720.0,
       "anomaly": false
     },
     {
@@ -1047,6 +1047,24 @@
     {
       "date": "2026-02-25",
       "type": "out",
+      "category": "Mano de obra",
+      "driver": "Hernan Villada Villada",
+      "description": "Se le paga la mano obra del cambio de las pastas de freno delanteras",
+      "amount": 30000.0,
+      "anomaly": false
+    },
+    {
+      "date": "2026-02-25",
+      "type": "out",
+      "category": "Repuesto",
+      "driver": "Hernan Villada Villada",
+      "description": "Se le compran las pastas de freno delanteras",
+      "amount": 130000.0,
+      "anomaly": false
+    },
+    {
+      "date": "2026-02-25",
+      "type": "out",
       "category": "Gasto administrativo",
       "driver": "Juan Pablo Bayona Areiza",
       "description": "Se paga administrtación del 25 de febrero al 03 de marzo",
@@ -1063,24 +1081,6 @@
       "anomaly": false
     },
     {
-      "date": "2026-02-25",
-      "type": "out",
-      "category": "Repuesto",
-      "driver": "Hernan Villada Villada",
-      "description": "Se le compran las pastas de freno delanteras",
-      "amount": 130000.0,
-      "anomaly": false
-    },
-    {
-      "date": "2026-02-25",
-      "type": "out",
-      "category": "Mano de obra",
-      "driver": "Hernan Villada Villada",
-      "description": "Se le paga la mano obra del cambio de las pastas de freno delanteras",
-      "amount": 30000.0,
-      "anomaly": false
-    },
-    {
       "date": "2026-02-20",
       "type": "out",
       "category": "Mano de obra",
@@ -1091,20 +1091,20 @@
     },
     {
       "date": "2026-02-18",
-      "type": "out",
-      "category": "Gasto administrativo",
-      "driver": "Juan Pablo Bayona Areiza",
-      "description": "Se paga administrtación de los dias martes 17 de febrero y semana del 18 al 24 de febrero",
-      "amount": 119840.0,
-      "anomaly": false
-    },
-    {
-      "date": "2026-02-18",
       "type": "in",
       "category": "Liquidación",
       "driver": "Hernan Villada Villada",
       "description": "Liquidación semana del 18 al 24 de febrero (74232 km)",
       "amount": 480000.0,
+      "anomaly": false
+    },
+    {
+      "date": "2026-02-18",
+      "type": "out",
+      "category": "Gasto administrativo",
+      "driver": "Juan Pablo Bayona Areiza",
+      "description": "Se paga administrtación de los dias martes 17 de febrero y semana del 18 al 24 de febrero",
+      "amount": 119840.0,
       "anomaly": false
     },
     {
@@ -1118,15 +1118,6 @@
     },
     {
       "date": "2026-02-11",
-      "type": "out",
-      "category": "Gasto administrativo",
-      "driver": "Juan Pablo Bayona Areiza",
-      "description": "Se paga administrtación de la semana del 03 al 09 de febrero",
-      "amount": 102720.0,
-      "anomaly": false
-    },
-    {
-      "date": "2026-02-11",
       "type": "in",
       "category": "Liquidación",
       "driver": "nan",
@@ -1135,7 +1126,7 @@
       "anomaly": false
     },
     {
-      "date": "2026-02-07",
+      "date": "2026-02-11",
       "type": "out",
       "category": "Gasto administrativo",
       "driver": "Juan Pablo Bayona Areiza",
@@ -1153,6 +1144,60 @@
       "anomaly": false
     },
     {
+      "date": "2026-02-07",
+      "type": "out",
+      "category": "Gasto administrativo",
+      "driver": "Juan Pablo Bayona Areiza",
+      "description": "Se paga administrtación de la semana del 03 al 09 de febrero",
+      "amount": 102720.0,
+      "anomaly": false
+    },
+    {
+      "date": "2026-02-03",
+      "type": "out",
+      "category": "Mano de obra",
+      "driver": "Juan Pablo Bayona Areiza",
+      "description": "Mano de obra",
+      "amount": 900000.0,
+      "anomaly": true
+    },
+    {
+      "date": "2026-02-02",
+      "type": "out",
+      "category": "Mantenimiento",
+      "driver": "Juan Pablo Bayona Areiza",
+      "description": "Se repara el carter de la caja",
+      "amount": 120000.0,
+      "anomaly": false
+    },
+    {
+      "date": "2026-02-01",
+      "type": "out",
+      "category": "Mantenimiento",
+      "driver": "Juan Pablo Bayona Areiza",
+      "description": "Aceite de motor (Este se le echo inicialmente para sacar a trabajar el vehículo y al ocurrir el daño del motor)",
+      "amount": 170000.0,
+      "anomaly": false
+    },
+    {
+      "date": "2026-01-31",
+      "type": "out",
+      "category": "Mantenimiento",
+      "driver": "Juan Pablo Bayona Areiza",
+      "description": "1 Silicona",
+      "amount": 30000.0,
+      "anomaly": false
+    },
+    {
+      "date": "2026-01-30",
+      "type": "out",
+      "category": "Mantenimiento",
+      "driver": "Juan Pablo Bayona Areiza",
+      "description": "Aceites de caja 5 litros CVT",
+      "amount": 300000.0,
+      "anomaly": false
+    },
+    {
       "date": "2026-01-29",
       "type": "out",
       "category": "Repuesto",
@@ -1162,12 +1207,12 @@
       "anomaly": false
     },
     {
-      "date": "2026-01-28",
-      "type": "in",
-      "category": "Liquidación",
-      "driver": "nan",
-      "description": "Liquidación dias 31, 01, 02 y 03 de febrero",
-      "amount": 320000.0,
+      "date": "2026-01-29",
+      "type": "out",
+      "category": "Mantenimiento",
+      "driver": "Juan Pablo Bayona Areiza",
+      "description": "Aceite 1 galon",
+      "amount": 190000.0,
       "anomaly": false
     },
     {
@@ -1182,10 +1227,91 @@
     {
       "date": "2026-01-28",
       "type": "out",
+      "category": "Mantenimiento",
+      "driver": "Juan Pablo Bayona Areiza",
+      "description": "Refrigerante",
+      "amount": 30000.0,
+      "anomaly": false
+    },
+    {
+      "date": "2026-01-28",
+      "type": "out",
       "category": "Gasto administrativo",
       "driver": "Juan Pablo Bayona Areiza",
       "description": "Se paga administrtación de los dias 31, 01, 02 y 03 de febrero",
       "amount": 68480.0,
+      "anomaly": false
+    },
+    {
+      "date": "2026-01-28",
+      "type": "in",
+      "category": "Liquidación",
+      "driver": "nan",
+      "description": "Liquidación dias 31, 01, 02 y 03 de febrero",
+      "amount": 320000.0,
+      "anomaly": false
+    },
+    {
+      "date": "2026-01-27",
+      "type": "out",
+      "category": "Mantenimiento",
+      "driver": "Juan Pablo Bayona Areiza",
+      "description": "Gasolina",
+      "amount": 30000.0,
+      "anomaly": false
+    },
+    {
+      "date": "2026-01-26",
+      "type": "out",
+      "category": "Repuesto",
+      "driver": "Juan Pablo Bayona Areiza",
+      "description": "Filtro de aire acondicionado",
+      "amount": 20000.0,
+      "anomaly": false
+    },
+    {
+      "date": "2026-01-25",
+      "type": "out",
+      "category": "Repuesto",
+      "driver": "Juan Pablo Bayona Areiza",
+      "description": "Filtro de aire de motor",
+      "amount": 60000.0,
+      "anomaly": false
+    },
+    {
+      "date": "2026-01-24",
+      "type": "out",
+      "category": "Repuesto",
+      "driver": "Juan Pablo Bayona Areiza",
+      "description": "Empaque del multiple de admision",
+      "amount": 70000.0,
+      "anomaly": false
+    },
+    {
+      "date": "2026-01-23",
+      "type": "out",
+      "category": "Repuesto",
+      "driver": "Juan Pablo Bayona Areiza",
+      "description": "Empaque de tapa valvula",
+      "amount": 70000.0,
+      "anomaly": false
+    },
+    {
+      "date": "2026-01-22",
+      "type": "out",
+      "category": "Repuesto",
+      "driver": "Juan Pablo Bayona Areiza",
+      "description": "Empaque de culata",
+      "amount": 65000.0,
+      "anomaly": false
+    },
+    {
+      "date": "2026-01-21",
+      "type": "out",
+      "category": "Repuesto",
+      "driver": "Juan Pablo Bayona Areiza",
+      "description": "Casquetes de biela",
+      "amount": 75000.0,
       "anomaly": false
     },
     {
@@ -1262,20 +1388,11 @@
     },
     {
       "date": "2026-01-08",
-      "type": "out",
-      "category": "Gasto administrativo",
+      "type": "in",
+      "category": "Liquidación",
       "driver": "Otros conductores ",
-      "description": "Se manda a lavar el vehiculo para entregarlo lavado",
-      "amount": 22000.0,
-      "anomaly": false
-    },
-    {
-      "date": "2026-01-08",
-      "type": "out",
-      "category": "Gasto administrativo",
-      "driver": "Otros conductores ",
-      "description": "Se compra gasolina para echarle al vehículo ya que estaba en reserva",
-      "amount": 10000.0,
+      "description": "El conductor da este dinero pagando los dias 08 y 09 de enero",
+      "amount": 160000.0,
       "anomaly": false
     },
     {
@@ -1290,10 +1407,28 @@
     {
       "date": "2026-01-08",
       "type": "out",
+      "category": "Gasto administrativo",
+      "driver": "Otros conductores ",
+      "description": "Se compra gasolina para echarle al vehículo ya que estaba en reserva",
+      "amount": 10000.0,
+      "anomaly": false
+    },
+    {
+      "date": "2026-01-08",
+      "type": "out",
       "category": "Mano de obra",
       "driver": "Otros conductores ",
       "description": "Se paga mano de obra del cambio de los bombillos",
       "amount": 6000.0,
+      "anomaly": false
+    },
+    {
+      "date": "2026-01-08",
+      "type": "out",
+      "category": "Gasto administrativo",
+      "driver": "Otros conductores ",
+      "description": "Se manda a lavar el vehiculo para entregarlo lavado",
+      "amount": 22000.0,
       "anomaly": false
     },
     {
@@ -1330,15 +1465,6 @@
       "driver": "Otros conductores ",
       "description": "Se le compra el bombillo del stop trasero",
       "amount": 10000.0,
-      "anomaly": false
-    },
-    {
-      "date": "2026-01-08",
-      "type": "in",
-      "category": "Liquidación",
-      "driver": "Otros conductores ",
-      "description": "El conductor da este dinero pagando los dias 08 y 09 de enero",
-      "amount": 160000.0,
       "anomaly": false
     },
     {
@@ -1380,6 +1506,24 @@
     {
       "date": "2025-12-19",
       "type": "out",
+      "category": "Gasto administrativo",
+      "driver": "Juan Pablo Bayona Areiza",
+      "description": "Se le echa gasolina al vehículo para poderlo entregar",
+      "amount": 20000.0,
+      "anomaly": false
+    },
+    {
+      "date": "2025-12-19",
+      "type": "out",
+      "category": "Mantenimiento",
+      "driver": "Juan Pablo Bayona Areiza",
+      "description": "Se hace alinear el vehículo",
+      "amount": 70000.0,
+      "anomaly": false
+    },
+    {
+      "date": "2025-12-19",
+      "type": "out",
       "category": "Mano de obra",
       "driver": "Juan Pablo Bayona Areiza",
       "description": "Se le arregla el cilindro al vehiculo ya que se partio la llave de otro vehículo adentro",
@@ -1396,21 +1540,12 @@
       "anomaly": false
     },
     {
-      "date": "2025-12-19",
+      "date": "2025-12-18",
       "type": "out",
-      "category": "Mantenimiento",
+      "category": "Accesorio",
       "driver": "Juan Pablo Bayona Areiza",
-      "description": "Se hace alinear el vehículo",
-      "amount": 70000.0,
-      "anomaly": false
-    },
-    {
-      "date": "2025-12-19",
-      "type": "out",
-      "category": "Gasto administrativo",
-      "driver": "Juan Pablo Bayona Areiza",
-      "description": "Se le echa gasolina al vehículo para poderlo entregar",
-      "amount": 20000.0,
+      "description": "GPS",
+      "amount": 340000.0,
       "anomaly": false
     },
     {
@@ -1429,15 +1564,6 @@
       "driver": "Juan Pablo Bayona Areiza",
       "description": "Se hace recargar el aire acondicionado",
       "amount": 120000.0,
-      "anomaly": false
-    },
-    {
-      "date": "2025-12-18",
-      "type": "out",
-      "category": "Accesorio",
-      "driver": "Juan Pablo Bayona Areiza",
-      "description": "GPS",
-      "amount": 340000.0,
       "anomaly": false
     },
     {

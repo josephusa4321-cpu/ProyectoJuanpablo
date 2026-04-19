@@ -11,6 +11,15 @@ echo.
 echo Procesando... por favor espere...
 echo.
 
+echo 1. Estandarizando datos desde el Excel original...
+py estandarizar_datos.py
+if %ERRORLEVEL% NEQ 0 (
+    echo [ERROR] Fallo la estandarizacion. Revisa que el Excel no este abierto.
+    pause
+    exit /b
+)
+
+echo 2. Generando reportes HTML premium...
 py generar_reportes.py
 
 echo.

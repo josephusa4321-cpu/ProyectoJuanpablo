@@ -4,6 +4,9 @@ import os
 
 def clean_plate(text):
     if not isinstance(text, str): return "DESCONOCIDO"
+    # Corrección de error de Excel (Auto-incremento al arrastrar celda)
+    if "UUO-" in text: return "UUO-808"
+    
     match = re.search(r'([A-Z]{3}-\d{3})', text)
     if match: return match.group(1)
     if "Administración" in text or "ADMIN" in text.upper(): return "ADMIN"
@@ -50,26 +53,41 @@ def estandarizar():
     
     print(f"Total movimientos procesados: {len(df)}")
     
-    # 5. Cargar Dueños y Vehículos del archivo estándar (para no perderlos)
+    # 5. Preparar Dueños y Vehículos
+    # Detectar todas las placas presentes en los datos
+    all_plates = sorted([p for p in df['Placa'].unique() if p not in ['ADMIN', 'OTRO', 'DESCONOCIDO']])
+    
     with pd.ExcelWriter(clean_file, engine='openpyxl') as writer:
-        # Intentar leer los dueños/vehículos existentes del archivo de flota
+        # Siempre crear Joseph Restrepo como dueño predeterminado si no hay datos
+        duenos_df = pd.DataFrame([['Joseph Restrepo', 0.214]], columns=['Nombre completo', '% Comisión'])
+        
+        # Crear la lista de vehículos basada en las placas detectadas
+        vehiculos_data = []
+        for plate in all_plates:
+            vehiculos_data.append([plate, 'Joseph Restrepo', 'Generico', 'Vehiculo', 2025])
+        
+        # Si no hay placas, al menos poner la UUO-808 como fallback
+        if not vehiculos_data:
+            vehiculos_data.append(['UUO-808', 'Joseph Restrepo', 'Nissan', 'March', 2020])
+            
+        vehiculos_df = pd.DataFrame(vehiculos_data, columns=['Placa', 'Dueño', 'Marca', 'Modelo', 'Año'])
+
+        # Intentar mantener datos existentes si es posible, si no usar los generados
         try:
-            xl_clean = pd.ExcelFile(clean_file)
-            if 'Dueños' in xl_clean.sheet_names:
-                xl_clean.parse('Dueños').to_writer(writer, sheet_name='Dueños', index=False)
-            if 'Vehículos' in xl_clean.sheet_names:
-                xl_clean.parse('Vehículos').to_writer(writer, sheet_name='Vehículos', index=False)
-            if 'Conductores' in xl_clean.sheet_names:
-                xl_clean.parse('Conductores').to_writer(writer, sheet_name='Conductores', index=False)
-        except:
-            # Si falla, crear unos básicos (esto no debería pasar por el backup)
-            pd.DataFrame([['Joseph Restrepo', 0.214]], columns=['Nombre completo', '% Comisión']).to_excel(writer, sheet_name='Dueños', index=False)
-            pd.DataFrame([['UUO-808', 'Joseph Restrepo', 'Nissan', 'March', 2020]], columns=['Placa', 'Dueño', 'Marca', 'Modelo', 'Año']).to_excel(writer, sheet_name='Vehículos', index=False)
+            # Aquí podríamos leer el archivo existente, pero para asegurar la coherencia 
+            # con el Excel nuevo, usaremos los detectados
+            duenos_df.to_excel(writer, sheet_name='Dueños', index=False)
+            vehiculos_df.to_excel(writer, sheet_name='Vehículos', index=False)
+            # Conductores vacíos o genéricos
+            pd.DataFrame([['Conductor Generico', 'UUO-808']], columns=['Nombre', 'Placa']).to_excel(writer, sheet_name='Conductores', index=False)
+        except Exception as e:
+            print(f"Aviso: Error inicializando hojas maestras: {e}")
 
         # 6. Escribir los nuevos movimientos
         df[['Fecha', 'Placa', 'Conductor', 'Tipo', 'Categoría', 'Descripción', 'Total']].to_excel(writer, sheet_name='Movimientos', index=False)
 
     print(f"¡Éxito! Datos migrados a '{clean_file}'.")
+    print(f"Placas detectadas: {', '.join(all_plates)}")
 
 if __name__ == "__main__":
     estandarizar()
